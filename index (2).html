@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Benefits Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Employee Benefits Management and Perks Mangement</h1>
+    </header>
+
+    <main id="main-content">
+        <!-- Login Page -->
+        <section id="login-section" class="form-section">
+            <div class="welcome-block">
+                <h2>WealthSphere Welcomes You</h2>
+                <p>Join us in managing your benefits and perks.</p>
+            </div>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="signup-link">Sign up here</a></p>
+        </section>
+
+        <!-- Signup Page -->
+        <section id="signup-section" class="form-section" style="display:none;">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label for="new-username">Username:</label>
+                <input type="text" id="new-username" required>
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" id="login-link">Login here</a></p>
+        </section>
+
+        <!-- User Info Page -->
+        <section id="user-info-section" class="form-section" style="display:none;">
+            <h2>User Information</h2>
+            <form id="user-info-form">
+                <label for="display-name">Display Name:</label>
+                <input type="text" id="display-name" required>
+                <label for="mobile-number">Mobile Number:</label>
+                <input type="tel" id="mobile-number" required>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required>
+                <label for="id-card">Upload ID Card:</label>
+                <input type="file" id="id-card" accept="image/*" required>
+                <button type="submit">Save Information</button>
+            </form>
+        </section>
+
+        <!-- Home Page -->
+        <section id="home-section" class="form-section" style="display:none;">
+            <h2>Welcome to Your Benefits Portal</h2>
+            <div class="home-blocks">
+                <div class="home-block" id="view-manage-benefits">
+                    <h3><a href="#" id="manage-benefits-link">View and Manage Benefits</a></h3>
+                    <p>Access your benefits and manage your preferences.</p>
+                </div>
+                <div class="home-block" id="retirement-plans">
+                    <h3><a href="#" id="retirement-plans-link">General Retirement Plans</a></h3>
+                    <p>Explore various retirement plans available for you.</p>
+                </div>
+                <div class="home-block" id="financial-education">
+                    <h3><a href="#" id="financial-education-link">Financial Education</a></h3>
+                    <p>Learn more about financial wellness and planning.</p>
+                </div>
+                <div class="home-block" id="about-us">
+                    <h3><a href="#" id="about-us-link">About Us</a></h3>
+                    <p>Learn more about our mission and values.</p>
+                </div>
+                <p>If you have any queries, feel free to <a href="mailto:wealthsphere2k24@gmail.com">Contact Us</a>.</p>
+            </div>
+        </section>
+
+        <!-- Manage Benefits Page -->
+        <section id="manage-benefits-section" class="form-section" style="display:none;">
+            <h2>Manage Benefits</h2>
+            <form id="benefits-form">
+                <label for="organization">Select Organization:</label>
+                <select id="organization" required>
+                    <option value="">--Select Organization--</option>
+                    <option value="VIT AP UNIVERSITY">VIT AP UNIVERSITY</option>
+                    <option value="Google">Google</option>
+                    <option value="Microsoft">Microsoft</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Amazon">Amazon</option>
+                    <option value="Facebook">Facebook</option>
+                </select>
+                
+                <label for="category">Select Category:</label>
+                <select id="category" required>
+                    <option value="">--Select Category--</option>
+                    <option value="Technical">Technical</option>
+                    <option value="Non-technical">Non-technical</option>
+                    <option value="Contract">Contract</option>
+                </select>
+                
+                <label for="salary">Salary:</label>
+                <input type="number" id="salary" required>
+
+                <button type="submit">Get Benefits</button>
+            </form>
+
+            <div id="benefits-display" style="display:none;">
+                <h3>Available Benefits</h3>
+                <ul id="benefits-list">
+                    <!-- Benefits will be added here -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Success Page -->
+        <section id="success-section" class="form-section" style="display:none;">
+            <h2>Benefit Added Successfully!</h2>
+            <p>The benefit has been added to your profile successfully.</p>
+            <button id="next-button">Next</button>
+            <button id="back-to-home">Back to Home</button>
+        </section>
+
+        <!-- Under Construction Page -->
+        <section id="under-construction-section" class="form-section" style="display:none;">
+            <h2>Under Construction</h2>
+            <p>This app is still under construction, please wait as we develop.</p>
+            <button id="back-to-home-uc">Back to Home</button>
+        </section>
+
+        <!-- Retirement Plans Page -->
+        <section id="retirement-plans-section" class="form-section" style="display:none;">
+            <h2>General Retirement Plans</h2>
+            <ul>
+                <li>401(k) Plan - A tax-advantaged retirement savings plan. <a href="#">More on this</a></li>
+                <li>Roth IRA - An individual retirement account that allows tax-free growth. <a href="#">More on this</a></li>
+                <li>Pension Plan - A fixed sum paid regularly to a person after retirement. <a href="#">More on this</a></li>
+                <li>Simple IRA - A retirement plan that allows employees to contribute through payroll deductions. <a href="#">More on this</a></li>
+                <li>SEP IRA - A Simplified Employee Pension plan allowing employers to make contributions to their employees' retirement savings. <a href="#">More on this</a></li>
+                <li>Defined Benefit Plan - A retirement plan where employer provides a specified payment amount in retirement. <a href="#">More on this</a></li>
+                <li>Target Date Fund - A mutual fund that automatically reallocates assets as the target date approaches. <a href="#">More on this</a></li>
+                <li>Cash Balance Plan - A type of defined benefit plan that provides a "cash balance" account. <a href="#">More on this</a></li>
+            </ul>
+            <button id="back-to-home-from-retirement">Back to Home</button>
+        </section>
+
+        <!-- Financial Education Page -->
+        <section id="financial-education-section" class="form-section" style="display:none;">
+            <h2>Financial Education</h2>
+            <h3>Watch These Videos:</h3>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=G3B8N6QqL9E" target="_blank">Understanding Retirement Accounts</a></li>
+                <li><a href="https://www.youtube.com/watch?v=6Vw66s6kW5E" target="_blank">Budgeting Basics</a></li>
+                <li><a href="https://www.youtube.com/watch?v=O62-Xw6aU5I" target="_blank">Investing 101</a></li>
+                <li><a href="https://www.youtube.com/watch?v=dyYeyh3J95A" target="_blank">Debt Management Strategies</a></li>
+                <li><a href="https://www.youtube.com/watch?v=45z3K_H3MkU" target="_blank">Saving for College</a></li>
+                <li><a href="https://www.youtube.com/watch?v=X_I2-ckab_M" target="_blank">Tax Planning Tips</a></li>
+                <li><a href="https://www.youtube.com/watch?v=u5Ah5i9g4N4" target="_blank">Retirement Planning</a></li>
+                <li><a href="https://www.youtube.com/watch?v=ke6PA1wL2h4" target="_blank">Investment Strategies</a></li>
+                <li><a href="https://www.youtube.com/watch?v=x8t0DCPICZg" target="_blank">Emergency Funds Explained</a></li>
+            </ul>
+            <button id="back-to-home-from-financial">Back to Home</button>
+        </section>
+
+        <!-- About Us Page -->
+        <section id="about-us-section" class="form-section" style="display:none;">
+            <h2>About Us</h2>
+            <p>Our mission is to efficiently manage your benefits, ensuring you have access to all the resources you need for a secure financial future. We strive to provide personalized support and information to help you navigate your benefits and make informed decisions.</p>
+            <button id="back-to-home-from-about">Back to Home</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Employee Benefits Management</p>
+    </footer>
+
+    <script>
+        const benefits = [];
+
+        // Login functionality
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('login-section').style.display = 'none';
+            document.getElementById('user-info-section').style.display = 'block';
+        });
+
+        // Sign up link functionality
+        document.getElementById('signup-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('login-section').style.display = 'none';
+            document.getElementById('signup-section').style.display = 'block';
+        });
+
+        // Back to login link functionality
+        document.getElementById('login-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('signup-section').style.display = 'none';
+            document.getElementById('login-section').style.display = 'block';
+        });
+
+        // Saving user information
+        document.getElementById('user-info-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const displayName = document.getElementById('display-name').value;
+            const mobileNumber = document.getElementById('mobile-number').value;
+            const email = document.getElementById('email').value;
+            const idCard = document.getElementById('id-card').files[0];
+
+            console.log('User Info Saved:', { displayName, mobileNumber, email, idCard });
+
+            alert('Your information has been saved successfully!');
+
+            document.getElementById('user-info-section').style.display = 'none';
+            document.getElementById('home-section').style.display = 'block';
+        });
+
+        // Manage benefits link functionality
+        document.getElementById('manage-benefits-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('home-section').style.display = 'none';
+            document.getElementById('manage-benefits-section').style.display = 'block';
+        });
+
+        // Retirement plans link functionality
+        document.getElementById('retirement-plans-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('home-section').style.display = 'none';
+            document.getElementById('retirement-plans-section').style.display = 'block';
+        });
+
+        // Financial education link functionality
+        document.getElementById('financial-education-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('home-section').style.display = 'none';
+            document.getElementById('financial-education-section').style.display = 'block';
+        });
+
+        // About us link functionality
+        document.getElementById('about-us-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('home-section').style.display = 'none';
+            document.getElementById('about-us-section').style.display = 'block';
+        });
+
+        // Get benefits functionality
+        document.getElementById('benefits-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const organization = document.getElementById('organization').value;
+            const category = document.getElementById('category').value;
+            const salary = document.getElementById('salary').value;
+
+            // Show benefits display section
+            document.getElementById('benefits-display').style.display = 'block';
+            const benefitsList = document.getElementById('benefits-list');
+            benefitsList.innerHTML = ''; // Clear previous benefits
+
+            // Sample benefits logic based on organization and category
+            if (organization && category) {
+                benefitsList.innerHTML += `<li>Health Insurance (${organization}) <button class="manage-btn" data-benefit="Health Insurance">Manage</button></li>`;
+                benefitsList.innerHTML += `<li>Retirement Savings Plan (${organization}) <button class="manage-btn" data-benefit="Retirement Savings Plan">Manage</button></li>`;
+                
+                if (category === "Technical") {
+                    benefitsList.innerHTML += `<li>Transport Benefit (${organization}) <button class="manage-btn" data-benefit="Transport Benefit">Manage</button></li>`;
+                }
+            }
+
+            // Add event listeners to manage buttons
+            document.querySelectorAll('.manage-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const benefitName = this.getAttribute('data-benefit');
+                    document.getElementById('manage-benefits-section').style.display = 'none';
+                    document.getElementById('success-section').style.display = 'block';
+                });
+            });
+        });
+
+        // Next button functionality
+        document.getElementById('next-button').addEventListener('click', function() {
+            document.getElementById('success-section').style.display = 'none';
+            document.getElementById('under-construction-section').style.display = 'block';
+        });
+
+        // Back to home button functionality
+        document.getElementById('back-to-home').addEventListener('click', function() {
+            document.getElementById('success-section').style.display = 'none';
+            document.getElementById('home-section').style.display = 'block';
+        });
+
+        // Back to home from under construction
+        document.getElementById('back-to-home-uc').addEventListener('click', function() {
+            document.getElementById('under-construction-section').style.display = 'none';
+            document.getElementById('home-section').style.display = 'block';
+        });
+
+        // Back to home from retirement plans
+        document.getElementById('back-to-home-from-retirement').addEventListener('click', function() {
+            document.getElementById('retirement-plans-section').style.display = 'none';
+            document.getElementById('home-section').style.display = 'block';
+        });
+
+        // Back to home from financial education
+        document.getElementById('back-to-home-from-financial').addEventListener('click', function() {
+            document.getElementById('financial-education-section').style.display = 'none';
+            document.getElementById('home-section').style.display = 'block';
+        });
+
+        // Back to home from about us
+        document.getElementById('back-to-home-from-about').addEventListener('click', function() {
+            document.getElementById('about-us-section').style.display = 'none';
+            document.getElementById('home-section').style.display = 'block';
+        });
+        "<a href="
+    </script>
+</body>
+</html>
